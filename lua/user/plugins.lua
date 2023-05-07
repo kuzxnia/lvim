@@ -77,6 +77,7 @@ lvim.plugins = {
       require('dressing').setup({})
     end,
   },
+  "windwp/nvim-spectre",
   -- rust
   "simrat39/rust-tools.nvim",
   -- python
