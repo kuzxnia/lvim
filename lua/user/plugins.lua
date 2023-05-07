@@ -77,6 +77,8 @@ lvim.plugins = {
       require('dressing').setup({})
     end,
   },
+  -- rust
+  "simrat39/rust-tools.nvim",
   -- python
   "mfussenegger/nvim-dap-python",
   -- test
