@@ -12,10 +12,3 @@ lvim.keys.normal_mode['<C-j>'] = '<Cmd>TmuxNavigateDown<CR>'
 lvim.keys.normal_mode['<C-h>'] = '<Cmd>TmuxNavigateLeft<CR>'
 lvim.keys.normal_mode['<C-k>'] = '<Cmd>TmuxNavigateUp<CR>'
 lvim.keys.normal_mode['<C-l>'] = '<Cmd>TmuxNavigateRight<CR>'
--- replace
-lvim.builtin.which_key.["r"] = {
-  name = "Replace",
-  r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
-  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
-}
