@@ -80,6 +80,8 @@ lvim.plugins = {
   "windwp/nvim-spectre",
   "sindrets/diffview.nvim",
   "towolf/vim-helm",
+  "f-person/git-blame.nvim",
+  "TimUntersberger/neogit",
   -- rust
   "simrat39/rust-tools.nvim",
   -- python
