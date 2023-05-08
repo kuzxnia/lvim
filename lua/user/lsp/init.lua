@@ -11,6 +11,9 @@ vim.list_extend(
     "pylsp",
     "pylyzer",
     "ruff_lsp",
+    "yaml-language-server",
+    "yamlls",
+    "yamllint" 
   }
 )
 lvim.lsp.diagnostics.virtual_text = false

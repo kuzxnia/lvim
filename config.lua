@@ -1,6 +1,7 @@
 reload "user.config"
 reload "user.plugins"
 reload "user.keymaps"
+reload "user.autocommands"
 reload "user.lsp"
 reload "user.which-key"
 reload "user.telescope"
