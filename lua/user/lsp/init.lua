@@ -1,4 +1,3 @@
-
 lvim.lsp.installer.setup.automatic_servers_installation = false
 lvim.lsp.automatic_servers_installation = false
 vim.list_extend(
@@ -16,7 +15,7 @@ vim.list_extend(
     "yamllint" 
   }
 )
-lvim.lsp.diagnostics.virtual_text = false
+vim.diagnostic.config({ virtual_text = false })
 lvim.lsp.on_attach_callback = function(client, _)
     client.server_capabilities.semanticTokensProvider = nil
 end

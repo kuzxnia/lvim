@@ -26,7 +26,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { command = "flake8", filetypes = { "python" }, args = { "--max-line-length=120" } },
-  { command = "mypy", filetypes = { "python" }, args = { "--ignore-missing-imports" } },
+  -- { command = "mypy", filetypes = { "python" }, args = { "--ignore-missing-imports" } },
 }
 
 -- setup debug adapter
@@ -38,6 +38,9 @@ end)
 
 -- setup testing
 require("neotest").setup({
+  quickfix = {
+    enabled = false
+  },
   adapters = {
     require("neotest-python")({
       -- Extra arguments for nvim-dap configuration
@@ -46,7 +49,7 @@ require("neotest").setup({
         justMyCode = false,
         console = "integratedTerminal",
       },
-      args = { "--log-level", "DEBUG", "--quiet" },
+      args = { "--log-level", "DEBUG", "--quiet", "-vv" },
       runner = "pytest",
     })
   }
