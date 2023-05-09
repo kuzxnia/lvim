@@ -41,6 +41,14 @@ require("neotest").setup({
   quickfix = {
     enabled = false
   },
+  icons = {
+      running_animated = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+  },
+  strategies = {
+    integrated = {
+      width = 180,
+    },
+  },
   adapters = {
     require("neotest-python")({
       -- Extra arguments for nvim-dap configuration
@@ -48,6 +56,8 @@ require("neotest").setup({
       dap = {
         justMyCode = false,
         console = "integratedTerminal",
+        subProcess = false,
+        pytest_discovery = true,
       },
       args = { "--log-level", "DEBUG", "--quiet", "-vv" },
       runner = "pytest",

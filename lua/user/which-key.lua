@@ -4,12 +4,6 @@ lvim.builtin.which_key.vmappings["c"] = {"<Plug>(comment_toggle_linewise_visual)
 -- telescope
 lvim.builtin.which_key.mappings["<space>"] = { "<Cmd>Telescope find_files<CR>", "Find File" }
 lvim.builtin.which_key.mappings["f"] = { "<Cmd>Telescope find_files<CR>", "Find File" }
--- neotest
-lvim.builtin.which_key.mappings["dm"] = { "<cmd>lua require('neotest').run.run()<cr>", "Test Method" }
-lvim.builtin.which_key.mappings["dM"] = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", "Test Method DAP" }
-lvim.builtin.which_key.mappings["df"] = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", "Test Class" }
-lvim.builtin.which_key.mappings["dF"] = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", "Test Class DAP" }
-lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" }
 -- spectre
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
@@ -29,6 +23,16 @@ lvim.builtin.which_key.mappings["f"] = {
   r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
   k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
   C = { "<cmd>Telescope commands<cr>", "Commands" },
+}
+-- neotest
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Test",
+  m = { "<cmd>lua require('neotest').run.run()<cr>", "Test Method" },
+  M = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Test Method" },
+  c = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", "Test Class" },
+  C = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap' })<cr>", "Test Class" },
+  x = { "<cmd>lua require('neotest').stop()<cr>", "Terminate/stop test" },
+  S = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
 }
 lvim.builtin.which_key.mappings["g"] = {
   name = "Git",
