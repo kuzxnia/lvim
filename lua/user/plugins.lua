@@ -38,10 +38,7 @@ lvim.plugins = {
     event = "BufRead",
     config = function() require"lsp_signature".on_attach() end,
   },
-  {
-   "ggandor/lightspeed.nvim",
-    event = "BufRead",
-  },
+  {"ggandor/lightspeed.nvim", event = "BufRead"},
   {
     "ethanholz/nvim-lastplace",
     event = "BufRead",
@@ -61,12 +58,12 @@ lvim.plugins = {
       require('dressing').setup({})
     end,
   },
+  "mbbill/undotree",
+  "folke/trouble.nvim",
   "windwp/nvim-spectre",
-  "sindrets/diffview.nvim",
-  "towolf/vim-helm",
   "is0n/jaq-nvim",
-  "f-person/git-blame.nvim",
-  "TimUntersberger/neogit",
+  -- helm
+  "towolf/vim-helm",
   -- rust
   "simrat39/rust-tools.nvim",
   -- python
@@ -75,4 +72,8 @@ lvim.plugins = {
   "nvim-neotest/neotest",
   "antoinemadec/FixCursorHold.nvim",
   "nvim-neotest/neotest-python",
+  -- git
+  "TimUntersberger/neogit",
+  "rhysd/git-messenger.vim",
+  "sindrets/diffview.nvim",
 }

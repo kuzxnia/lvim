@@ -1,6 +1,9 @@
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
+local _, action_state = pcall(require, "telescope.action_state")
+local _, action_set = pcall(require, "telescope.action_set")
+
 local picker_config = {
   prompt_prefix = '🔍 ',
   previewer = nil,
@@ -35,4 +38,3 @@ lvim.builtin.telescope.defaults = {
     },
   }
 }
-

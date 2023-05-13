@@ -22,7 +22,7 @@ lvim.builtin.which_key.mappings["f"] = {
   M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
   r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
   k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-  C = { "<cmd>Telescope commands<cr>", "Commands" },
+  c = { "<cmd>Telescope commands<cr>", "Commands" },
 }
 -- neotest
 lvim.builtin.which_key.mappings["t"] = {
@@ -37,7 +37,7 @@ lvim.builtin.which_key.mappings["t"] = {
 lvim.builtin.which_key.mappings["g"] = {
   name = "Git",
   g = { "<cmd>Neogit<cr>", "Neogit" },
-  l = { "<cmd>GitBlameToggle<cr>", "Blame" },
+  l = { "<cmd>GitMessenger<cr>", "Blame" },
   p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
   r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
   R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -50,7 +50,8 @@ lvim.builtin.which_key.mappings["g"] = {
   b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
   c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
   f = { "<cmd>Telescope git_bcommits<cr>", "Checkout buffer commit" },
-  d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
+  d = { "<cmd>DiffviewFileHistory %<cr>", "Diff history this" },
+  D = { "<cmd>DiffviewFileHistory<cr>", "Diff history" },
 }
 lvim.builtin.which_key.mappings["l"] = {
   name = "LSP",

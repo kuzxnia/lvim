@@ -24,6 +24,19 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = {
+    "DiffviewFiles",
+    "DiffviewFileHistoryPanel",
+  },
+  callback = function()
+    vim.cmd [[
+      nnoremap <silent> <buffer> q :DiffviewClose<CR> 
+      set nobuflisted 
+    ]]
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "Jaq" },
   callback = function()
     vim.cmd [[

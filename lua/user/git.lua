@@ -1,6 +1,10 @@
+
+
+-- slabe to poprawienia
 vim.g.gitblame_enabled = 0
 vim.g.gitblame_message_template = "<summary> • <date> • <author>"
 vim.g.gitblame_highlight_group = "LineNr"
+
 
 lvim.builtin.gitsigns.opts.attach_to_untracked = false
 
@@ -28,8 +32,8 @@ require("neogit").setup {
   -- customize displayed signs
   signs = {
     -- { CLOSED, OPENED }
-    section = { ">", "v" },
-    item = { ">", "v" },
+    section = { " ", " " },
+    item = { " ", " " },
     hunk = { "", "" },
   },
   integrations = {
@@ -97,4 +101,18 @@ require("neogit").setup {
       -- ["s"] = "",
     },
   },
+}
+
+require("diffview").setup {
+  key_bindings = {
+    file_history_panel = { 
+      Q = '<Cmd>DiffviewClose<CR>' 
+    },
+    file_panel = { 
+      Q = '<Cmd>DiffviewClose<CR>' 
+    },
+    view = { 
+      Q = '<Cmd>DiffviewClose<CR>' 
+    },
+  }
 }
