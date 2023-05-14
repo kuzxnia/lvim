@@ -31,6 +31,3 @@ lvim.builtin.treesitter.ensure_installed = {
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
-
-lvim.builtin["terminal"].direction = "horizontal"
-lvim.builtin["terminal"].open_mapping = [[<c-t>]]
