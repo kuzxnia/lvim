@@ -1,5 +1,5 @@
 lvim.builtin["terminal"].direction = "horizontal"
-lvim.builtin["terminal"].open_mapping = [[<c-t>]]
+lvim.builtin["terminal"].open_mapping = [[<c-\>]]
 lvim.builtin["terminal"].terminal_mappings = true
 
 function _G.set_terminal_keymaps()

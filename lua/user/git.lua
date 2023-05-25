@@ -19,6 +19,11 @@ require("neogit").setup {
   auto_refresh = true,
   disable_builtin_notifications = false,
   use_magit_keybindings = false,
+  ignored_settings = {
+    "NeogitPushPopup--force-with-lease",
+    "NeogitPushPopup--force",
+    "NeogitCommitPopup--allow-empty",
+  },
   -- Change the default way of opening neogit
   kind = "tab",
   -- Change the default way of opening the commit popup

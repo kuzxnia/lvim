@@ -25,14 +25,16 @@ lvim.builtin.which_key.mappings["f"] = {
   c = { "<cmd>Telescope commands<cr>", "Commands" },
 }
 -- neotest
+-- TODO: open summary automatically
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
-  m = { "<cmd>lua require('neotest').run.run()<cr>", "Test Method" },
-  M = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Test Method" },
-  c = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", "Test Class" },
-  C = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap' })<cr>", "Test Class" },
+  m = { "<cmd>lua require('neotest').run.run()<cr>", "Test Function" },
+  M = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Test Function DAP" },
+  c = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", "Test File" },
+  C = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap' })<cr>", "Test File DAP" },
   x = { "<cmd>lua require('neotest').stop()<cr>", "Terminate/stop test" },
-  S = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
+  o = { "<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Show Output" },
+  s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
 }
 lvim.builtin.which_key.mappings["g"] = {
   name = "Git",
