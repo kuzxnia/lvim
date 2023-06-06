@@ -66,6 +66,9 @@ lvim.plugins = {
   "towolf/vim-helm",
   -- rust
   "simrat39/rust-tools.nvim",
+  -- go
+  "olexsmir/gopher.nvim",
+  "leoluz/nvim-dap-go",
   -- python
   "mfussenegger/nvim-dap-python",
   -- test
