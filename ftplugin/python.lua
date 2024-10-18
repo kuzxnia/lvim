@@ -9,6 +9,7 @@ local pyright_opts = {
         -- typeCheckingMode = "off",
         autoSearchPaths = true,
         diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true,
         -- useLibraryCodeForTypes = true,
       },
     },
@@ -30,37 +31,37 @@ linters.setup {
 }
 
 -- setup debug adapter
-lvim.builtin.dap.active = true
-local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
-pcall(function()
-  require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
-end)
+-- lvim.builtin.dap.active = true
+-- local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+-- pcall(function()
+--   require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+-- end)
 
 -- setup testing
-require("neotest").setup({
-  quickfix = {
-    enabled = false
-  },
-  icons = {
-      running_animated = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
-  },
-  strategies = {
-    integrated = {
-      width = 180,
-    },
-  },
-  adapters = {
-    require("neotest-python")({
-      -- Extra arguments for nvim-dap configuration
-      -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
-      dap = {
-        justMyCode = false,
-        console = "integratedTerminal",
-        subProcess = false,
-        pytest_discovery = true,
-      },
-      args = { "--log-level", "DEBUG", "--quiet", "-vv" },
-      runner = "pytest",
-    })
-  }
-})
+-- require("neotest").setup({
+--   quickfix = {
+--     enabled = false
+--   },
+--   icons = {
+--       running_animated = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+--   },
+--   strategies = {
+--     integrated = {
+--       width = 180,
+--     },
+--   },
+--   adapters = {
+--     require("neotest-python")({
+--       -- Extra arguments for nvim-dap configuration
+--       -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
+--       dap = {
+--         justMyCode = false,
+--         console = "integratedTerminal",
+--         subProcess = false,
+--         pytest_discovery = true,
+--       },
+--       args = { "--log-level", "DEBUG", "--quiet", "-vv" },
+--       runner = "pytest",
+--     })
+--   }
+-- })

@@ -15,6 +15,7 @@ vim.list_extend(
     "yamllint",
     "tsserver",
     "jdtls",
+    "buf-language-server"
   }
 )
 vim.diagnostic.config({ virtual_text = false })
